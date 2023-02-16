@@ -15,7 +15,7 @@ printf("Size of a char: %c byte(s) \n", a);
 printf("Size of an int: %d byte(s) \n", n);
 printf("Size of a long int: %ld  byte(s) \n", l);
 printf("Size of a long long int: %lld byte(s) \n", fl);
-printf("Size of a float: %f byte(s) \n", f);
+printf("Size of a float: %g byte(s) \n", f);
 
 return (0);
 }
