@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
+/* main - Entry point */
+/* To assign a random number to the variable n each time it is executed */
+/* Return: 0 (Success)*/
 /* betty style doc for function main goes there */
 int main(void)
 {
