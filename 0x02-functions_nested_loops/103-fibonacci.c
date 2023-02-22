@@ -14,11 +14,11 @@ int main(void)
 
 	while (z + y < 4000000)
 	{
-		z += y;
+	z += y;
 	if (z % 2 == 0)
-		sum += z;
-		y = z - y;
-		++x;
+	sum += z;
+	y = z - y;
+	++x;
 	}
 	printf("%ld\n", sum);
 	return (0);
