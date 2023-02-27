@@ -3,15 +3,14 @@
 /**
  * _puts - To print a string followed by newline
  * To stdout
- * @str - The string type
+ * @str: The string type
  * Return: string
  */
 
 void _puts(char *str)
 {
-	int i;
-	
-	i = 0;
+	int i = 0;
+
 	while (str[i])
 	{
 		_putchar(str[i]);
