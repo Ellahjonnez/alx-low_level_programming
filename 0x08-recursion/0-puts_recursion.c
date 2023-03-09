@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - To print a string, followed by a new line.
- * Using recursion
+ * Using recursion and _putchar
  * @s: Character
  */
 
