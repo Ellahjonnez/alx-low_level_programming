@@ -32,7 +32,7 @@ char *_strdup(char *str)
 	{
 		dupl[i] = str[i];
 	}
-	dupl[i] = '\0';
+	dupl[len] = '\0';
 	return (dupl);
 
 }
