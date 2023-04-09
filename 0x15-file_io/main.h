@@ -5,7 +5,7 @@
 
 /**
  * Header libraries used for this project
- * Project 0x15. C - File I/O
+ * Project 0x15_File_IO
  */
 
 #include <stdio.h>
@@ -16,9 +16,8 @@
 #include <stdlib.h>
 
 
-/**
- * Project prototype
- */
+
+ /* Project prototypes */
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
