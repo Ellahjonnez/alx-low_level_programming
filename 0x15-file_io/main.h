@@ -1,23 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
-
-/**
- * Header libraries used for this project
- * Project 0x15_File_IO
- */
-
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <stdlib.h>
-
-
-
- /* Project prototypes */
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
@@ -26,4 +13,4 @@ int append_text_to_file(const char *filename, char *text_content);
 void copy_file(const char *file_from, const char *file_to);
 
 
-#endif  /*End of MAIN_H */
+#endif /* End of MAIN_H */
