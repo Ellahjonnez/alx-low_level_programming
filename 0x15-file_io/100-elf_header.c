@@ -1,35 +1,31 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * main - the entry point
+ * main - check the code
  * description: displays the information contained in
  * the ELF header at the start of an ELF file
  * @argc: number of arguments
  * @argv: array of arguments
- *
  * Return: 0 on success, 98 on failure
  */
-
 int main(int argc, char *argv[])
 {
-	int fp;
+	int fd;
 	Elf64_Ehdr *header;
 
 	if (argc != 2)
 		dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
 
 	/* open file */
-	fp = open(argv[1], O_RDONLY);
-	if (fp == -1)
+	fd = open(argv[1], O_RDONLY);
+	if (fd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]), exit(98);
 
 	/* read ELF header */
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 		dprintf(STDERR_FILENO, "Error: malloc failed\n"), exit(98);
-	if (read(fp, header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
+	if (read(fd, header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 
 	/* check if file is ELF */
@@ -66,8 +62,8 @@ int main(int argc, char *argv[])
 	printf("  Section header string table index: %d\n", header->e_shstrndx);
 
 	/* close file */
-	if (close(fp) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp), exit(98);
+	if (close(fd) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd), exit(98);
 
 	return (0);
 }
