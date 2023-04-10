@@ -22,5 +22,5 @@ int get_endianness(void)
 		/* For big endian */
 		return (0);
 	}
-	
+
 }
