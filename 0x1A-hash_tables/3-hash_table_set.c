@@ -8,11 +8,8 @@
  * Return: 1 if it succeeded, 0 otherwise
  */
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value) 
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node;
-	char *value_copy;
-	unsigned long int index, i;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 	{
@@ -30,6 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* Duplicate the value */
 	char *value_copy = strdup(value);
+
 	if (value_copy == NULL)
 	{
 		free(new_node);
